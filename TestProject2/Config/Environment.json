@@ -1,0 +1,16 @@
+{
+  "Environments": {
+    "QA": {
+      "BaseUrl": "https://dev-gather.tracegains.com/",
+      "ApiKey": "d069fb6d-50a6-4bfd-8b96-554921bd3e30"
+    },
+    "Dev": {
+      "BaseUrl": "https://dev.example.com",
+      "ApiKey": "dev_api_key_here"
+    },
+    "Staging": {
+      "BaseUrl": "https://staging.example.com",
+      "ApiKey": "staging_api_key_here"
+    }
+  }
+}

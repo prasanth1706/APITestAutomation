@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<RunConfiguration>
+		<TestEnvironment>QA</TestEnvironment>
+		<!-- Your environment key here -->
+		<ResultsDirectory>.\TestResults</ResultsDirectory>
+		<!-- Optional: results directory -->
+		<CollectSourceInformation>true</CollectSourceInformation>
+	</RunConfiguration>
+</RunSettings>
