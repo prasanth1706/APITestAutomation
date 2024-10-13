@@ -5,7 +5,7 @@ namespace TestProject2.Helpers
 {
     public static class ApiHelper
     {
-        public static async Task<RestResponse> SendRequestAsync(string endpoint, Method method, EnvironmentModel env,
+        public static async Task<RestResponse> SendRequestAsync<Formula>(string endpoint, Method method, EnvironmentModel env,
             Dictionary<string, string> queryParams = null, object body = null, Dictionary<string, string> headers = null)
         {
             var client = new RestClient(env.BaseUrl);

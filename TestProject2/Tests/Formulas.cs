@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using APITestAutomation.Models;
+using RestSharp;
 using TestProject2.Helpers;
 
 namespace TestProject2.Tests
@@ -19,7 +20,7 @@ namespace TestProject2.Tests
             };
 
             // Send GET request and retry on failure
-            var response = await RetryHelper.RetryAsync(() => ApiHelper.SendRequestAsync(endpoint, Method.Get, _environment, queryParams), retryCount: 2);
+            var response = await RetryHelper.RetryAsync(() => ApiHelper.SendRequestAsync<Formula>(endpoint, Method.Get, _environment, queryParams), retryCount: 2);
 
             // Assert the response using Assert.That()
             Assert.That(response.IsSuccessful, Is.True, "API call failed after retrying.");
@@ -38,7 +39,7 @@ namespace TestProject2.Tests
             };
 
             // Send POST request and retry on failure
-            var response = await RetryHelper.RetryAsync(() => ApiHelper.SendRequestAsync(endpoint, Method.Post, _environment, body: body), retryCount: 2);
+            var response = await RetryHelper.RetryAsync(() => ApiHelper.SendRequestAsync<Formula>(endpoint, Method.Post, _environment, body: body), retryCount: 2);
 
             // Assert the response using Assert.That()
             Assert.That(response.IsSuccessful, Is.True, "API call failed after retrying.");
